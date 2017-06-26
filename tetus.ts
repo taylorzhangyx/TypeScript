@@ -34,3 +34,12 @@ document.write(superman.realName + " is " + superman.superName + "<br />");
 var employees: string[] = ["Bob", "Sally", "Sam"];
 
 document.write(employees.toString() + "<br />");
+
+var SuperStars : SuperHero[] = [];
+
+SuperStars.push({
+  realName: "TaylorK",
+  superName: "KeyMan"
+});
+
+document.write(SuperStars[0].realName + " is " + SuperStars[0].superName + "<br />");
