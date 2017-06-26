@@ -12,3 +12,8 @@ document.write("veriable is " + typeof(veriable) + "</br>");
 
 var strToNum: number = parseInt("5");
 var numToString: number = 66;
+document.write("numToString is " + typeof(numToString.toString()) + "</br>");
+
+const PI : number = 3.1415926;
+
+document.write(PI.toString());

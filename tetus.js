@@ -9,3 +9,6 @@ document.write("canVote is " + typeof (canVote) + "</br>");
 document.write("veriable is " + typeof (veriable) + "</br>");
 var strToNum = parseInt("5");
 var numToString = 66;
+document.write("numToString is " + typeof (numToString.toString()) + "</br>");
+var PI = 3.1415926;
+document.write(PI.toString());
