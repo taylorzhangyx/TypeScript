@@ -1,4 +1,4 @@
-var myName: string = "Derek";
+var myName: string = "Taylor";
 var myAge: number = 41;
 var canVote: boolean = true;
 var veriable: any = 2;
