@@ -11,4 +11,11 @@ var strToNum = parseInt("5");
 var numToString = 66;
 document.write("numToString is " + typeof (numToString.toString()) + "</br>");
 var PI = 3.1415926;
-document.write(PI.toString());
+document.write(PI.toString() + "<br />");
+var superman = {
+    realName: "Clark",
+    superName: "SuperMan"
+};
+document.write(superman.realName + " is " + superman.superName + "<br />");
+var employees = ["Bob", "Sally", "Sam"];
+document.write(employees.toString() + "<br />");

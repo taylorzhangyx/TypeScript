@@ -16,4 +16,21 @@ document.write("numToString is " + typeof(numToString.toString()) + "</br>");
 
 const PI : number = 3.1415926;
 
-document.write(PI.toString());
+document.write(PI.toString() + "<br />");
+
+
+interface SuperHero {
+  realName: string;
+  superName: string;
+}
+
+var superman : SuperHero = {
+  realName: "Clark",
+  superName: "SuperMan"
+}
+
+document.write(superman.realName + " is " + superman.superName + "<br />");
+
+var employees: string[] = ["Bob", "Sally", "Sam"];
+
+document.write(employees.toString() + "<br />");
