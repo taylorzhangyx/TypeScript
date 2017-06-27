@@ -86,6 +86,17 @@ document.write("Is a Dog an Animal : " + (grover instanceof Animal) + "<br />");
 //in keywork to check if an property in the class
 document.write("Does grove have a name : " + ('name' in grover) + "<br />");
 
+//Generic functions
+function GetType<T>(val : T) : string{
+  return typeof(val);
+}
+
+var aStr = "A String";
+var aNum = 10;
+
+document.write(GetType(aStr) + "<br />");
+document.write(GetType(aNum) + "<br />");
+
 //Interface Example
 interface Vehicle{
   drive(): any;
@@ -112,3 +123,26 @@ var bicycle = new Bicycle(2);
 
 car.drive();
 bicycle.drive();
+
+function GetWheels<w extends Vehicle>(veh : w): number{
+  return veh.drive();
+}
+
+GetWheels(car);
+GetWheels(bicycle);
+
+
+class GenericNumber<T>{
+  add: (a:T, b: T) => T;
+}
+
+var aNumber = new GenericNumber<number>();
+aNumber.add = function(x,y){return x + y};
+
+document.write("5 + 4 = " + aNumber.add(5,4) + "<br />");
+
+var aStrNum = new GenericNumber<string>();
+aStrNum.add = function(x,y){
+  return String(Number(x) + Number(y));
+}
+document.write("5 + 6 = " + aStrNum.add("5","6") + "<br />");

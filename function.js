@@ -81,6 +81,14 @@ document.write("# of Animals is " + Animal.howManyAnimals() + "<br />");
 document.write("Is a Dog an Animal : " + (grover instanceof Animal) + "<br />");
 //in keywork to check if an property in the class
 document.write("Does grove have a name : " + ('name' in grover) + "<br />");
+//Generic functions
+function GetType(val) {
+    return typeof (val);
+}
+var aStr = "A String";
+var aNum = 10;
+document.write(GetType(aStr) + "<br />");
+document.write(GetType(aNum) + "<br />");
 var Car = (function () {
     function Car(wheel) {
         this.wheel = wheel;
@@ -103,3 +111,21 @@ var car = new Car(4);
 var bicycle = new Bicycle(2);
 car.drive();
 bicycle.drive();
+function GetWheels(veh) {
+    return veh.drive();
+}
+GetWheels(car);
+GetWheels(bicycle);
+var GenericNumber = (function () {
+    function GenericNumber() {
+    }
+    return GenericNumber;
+}());
+var aNumber = new GenericNumber();
+aNumber.add = function (x, y) { return x + y; };
+document.write("5 + 4 = " + aNumber.add(5, 4) + "<br />");
+var aStrNum = new GenericNumber();
+aStrNum.add = function (x, y) {
+    return String(Number(x) + Number(y));
+};
+document.write("5 + 6 = " + aStrNum.add("5", "6") + "<br />");
