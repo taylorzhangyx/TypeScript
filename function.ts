@@ -85,3 +85,30 @@ document.write("Is a Dog an Animal : " + (grover instanceof Animal) + "<br />");
 
 //in keywork to check if an property in the class
 document.write("Does grove have a name : " + ('name' in grover) + "<br />");
+
+//Interface Example
+interface Vehicle{
+  drive(): any;
+}
+
+class Car implements Vehicle{
+  constructor(private wheel: number){}
+
+  drive(): void{
+    document.write("The car drives with " + this.wheel + " wheels <br />");
+  }
+}
+
+class Bicycle implements Vehicle{
+  constructor(private wheel: number){}
+
+  drive(): void{
+    document.write("The Bicycle drives with " + this.wheel + " wheels <br />");
+  }
+}
+
+var car = new Car(4);
+var bicycle = new Bicycle(2);
+
+car.drive();
+bicycle.drive();

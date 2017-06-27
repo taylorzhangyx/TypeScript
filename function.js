@@ -81,3 +81,25 @@ document.write("# of Animals is " + Animal.howManyAnimals() + "<br />");
 document.write("Is a Dog an Animal : " + (grover instanceof Animal) + "<br />");
 //in keywork to check if an property in the class
 document.write("Does grove have a name : " + ('name' in grover) + "<br />");
+var Car = (function () {
+    function Car(wheel) {
+        this.wheel = wheel;
+    }
+    Car.prototype.drive = function () {
+        document.write("The car drives with " + this.wheel + " wheels <br />");
+    };
+    return Car;
+}());
+var Bicycle = (function () {
+    function Bicycle(wheel) {
+        this.wheel = wheel;
+    }
+    Bicycle.prototype.drive = function () {
+        document.write("The Bicycle drives with " + this.wheel + " wheels <br />");
+    };
+    return Bicycle;
+}());
+var car = new Car(4);
+var bicycle = new Bicycle(2);
+car.drive();
+bicycle.drive();
