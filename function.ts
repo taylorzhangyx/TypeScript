@@ -146,3 +146,14 @@ aStrNum.add = function(x,y){
   return String(Number(x) + Number(y));
 }
 document.write("5 + 6 = " + aStrNum.add("5","6") + "<br />");
+
+//extract values from object/map
+var randVals = {x: 1, y: 2, z: 3};
+
+var {x ,y ,z} = randVals;
+
+document.write(x + y + z + "<br />");
+document.write("" + x + y + z + "<br />");
+
+[x, y, z] = [z , y , x];
+document.write("Switch: " + x + y + z + "<br />");
