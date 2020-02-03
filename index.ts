@@ -1,3 +1,5 @@
-import mod from './modules';
+import mod from './modules/index';
+import { DE } from './modules/index';
 
-const m = new mod();
+const m = new mod.A();
+const de = new DE.D();

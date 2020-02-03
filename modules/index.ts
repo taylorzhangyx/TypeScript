@@ -6,4 +6,5 @@ import DE from './classDE';
 const d = new DE.D();
 const e = new DE.E();
 
-export default { A, B, C, DE };
+export default { A, B, C };
+export { DE };
